@@ -1,4 +1,4 @@
-# tnm-rope-access
+# tmn-rope-access
 
 Next.js site for TMN Rope Access Projects.
 
@@ -16,7 +16,7 @@ cp .env.example .env.local   # optional
 If `pnpm` is not installed globally, use **npx** (same commands everywhere):
 
 ```bash
-cd /path/to/tnm
+cd /path/to/tmn
 npx pnpm@9 install
 npx pnpm@9 dev
 ```
