@@ -7,6 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Anchor, Building2, Sparkles, FileCheck, Wrench, Paintbrush, ArrowRight } from 'lucide-react'
+import { SERVICES_FEATURE_URL } from '@/lib/site-images'
 
 export const metadata: Metadata = {
   title: 'Services | TMN Rope Access Projects',
@@ -152,10 +153,11 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
-                  src="/images/project-2.jpg"
-                  alt="TMN Rope Access technician at work"
+                  src={SERVICES_FEATURE_URL}
+                  alt="Industrial technician at work on site"
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
               </div>

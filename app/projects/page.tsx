@@ -5,6 +5,7 @@ import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import Image from 'next/image'
+import { PROJECT_IMAGE_URLS } from '@/lib/site-images'
 
 export const metadata: Metadata = {
   title: 'Projects | TMN Rope Access Projects',
@@ -13,37 +14,37 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    image: '/images/project-1.jpg',
+    image: PROJECT_IMAGE_URLS[0],
     title: 'High-Rise Window Cleaning',
     category: 'Cleaning',
     description: 'Complete window cleaning for a 30-story commercial building in Johannesburg CBD.',
   },
   {
-    image: '/images/project-2.jpg',
+    image: PROJECT_IMAGE_URLS[1],
     title: 'Industrial Welding',
     category: 'Repairs',
     description: 'Structural welding repairs on an industrial facility using rope access techniques.',
   },
   {
-    image: '/images/project-3.jpg',
+    image: PROJECT_IMAGE_URLS[2],
     title: 'Tank Inspection',
     category: 'Inspection',
     description: 'Comprehensive inspection of large storage tanks at a petrochemical facility.',
   },
   {
-    image: '/images/project-4.jpg',
+    image: PROJECT_IMAGE_URLS[3],
     title: 'Bridge Maintenance',
     category: 'Maintenance',
     description: 'Routine maintenance and painting work on a major highway bridge structure.',
   },
   {
-    image: '/images/project-5.jpg',
+    image: PROJECT_IMAGE_URLS[4],
     title: 'Wind Turbine Service',
     category: 'Maintenance',
     description: 'Blade inspection and maintenance on wind turbines at a renewable energy site.',
   },
   {
-    image: '/images/project-6.jpg',
+    image: PROJECT_IMAGE_URLS[5],
     title: 'Facade Installation',
     category: 'Installation',
     description: 'Installation of facade cladding panels on a new commercial development.',
@@ -93,6 +94,7 @@ export default function ProjectsPage() {
                     alt={project.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
                   <div className="absolute top-4 left-4">

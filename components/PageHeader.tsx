@@ -1,10 +1,12 @@
+import { HERO_BG_URL } from '@/lib/site-images'
+
 interface PageHeaderProps {
   title: string
   subtitle?: string
   backgroundImage?: string
 }
 
-export default function PageHeader({ title, subtitle, backgroundImage = '/images/hero-bg.jpg' }: PageHeaderProps) {
+export default function PageHeader({ title, subtitle, backgroundImage = HERO_BG_URL }: PageHeaderProps) {
   return (
     <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28">
       {/* Background Image with Overlay */}

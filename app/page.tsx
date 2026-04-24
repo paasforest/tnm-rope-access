@@ -7,6 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Anchor, Building2, Sparkles, ArrowRight, Check } from 'lucide-react'
+import { ABOUT_TEAM_HOME_URL, PROJECT_IMAGE_URLS } from '@/lib/site-images'
 
 const featuredServices = [
   {
@@ -34,9 +35,9 @@ const highlights = [
 ]
 
 const featuredProjects = [
-  { image: '/images/project-1.jpg', title: 'High-Rise Window Cleaning' },
-  { image: '/images/project-2.jpg', title: 'Industrial Welding' },
-  { image: '/images/project-3.jpg', title: 'Tank Inspection' },
+  { image: PROJECT_IMAGE_URLS[0], title: 'High-Rise Window Cleaning' },
+  { image: PROJECT_IMAGE_URLS[1], title: 'Industrial Welding' },
+  { image: PROJECT_IMAGE_URLS[2], title: 'Tank Inspection' },
 ]
 
 export default function Home() {
@@ -127,10 +128,11 @@ export default function Home() {
             <div className="relative">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/about-team.jpg"
-                  alt="TMN Rope Access professional team"
+                  src={ABOUT_TEAM_HOME_URL}
+                  alt="Diverse professional team collaborating at work"
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
               </div>
@@ -166,6 +168,7 @@ export default function Home() {
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(min-width: 768px) 33vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/80 transition-all duration-300 flex items-center justify-center">
                   <h3 className="font-[family-name:var(--font-bebas-neue)] text-2xl text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 tracking-wider text-center px-4">

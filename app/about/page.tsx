@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import Image from 'next/image'
 import { Check, Shield, Award, Users, Clock } from 'lucide-react'
+import { ABOUT_TEAM_PAGE_URL } from '@/lib/site-images'
 
 export const metadata: Metadata = {
   title: 'About Us | TMN Rope Access Projects',
@@ -62,10 +63,11 @@ export default function AboutPage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/about-team.jpg"
-                  alt="TMN Rope Access professional team"
+                  src={ABOUT_TEAM_PAGE_URL}
+                  alt="Diverse team of professionals working together"
                   fill
                   className="object-cover"
+                  sizes="(min-width: 1024px) 45vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
               </div>

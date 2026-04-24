@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Check } from 'lucide-react'
+import { ABOUT_TEAM_HOME_URL } from '@/lib/site-images'
 
 const highlights = [
   'Skilled rope access technicians',
@@ -43,10 +44,11 @@ export default function About() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
-                src="/images/about-team.jpg"
-                alt="TMN Rope Access professional team"
+                src={ABOUT_TEAM_HOME_URL}
+                alt="Diverse professional team collaborating at work"
                 fill
                 className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
             </div>

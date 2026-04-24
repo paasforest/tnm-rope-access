@@ -1,30 +1,13 @@
 import Image from 'next/image'
+import { PROJECT_IMAGE_URLS } from '@/lib/site-images'
 
 const projects = [
-  {
-    image: '/images/project-1.jpg',
-    title: 'High-Rise Window Cleaning',
-  },
-  {
-    image: '/images/project-2.jpg',
-    title: 'Industrial Welding',
-  },
-  {
-    image: '/images/project-3.jpg',
-    title: 'Tank Inspection',
-  },
-  {
-    image: '/images/project-4.jpg',
-    title: 'Bridge Maintenance',
-  },
-  {
-    image: '/images/project-5.jpg',
-    title: 'Wind Turbine Service',
-  },
-  {
-    image: '/images/project-6.jpg',
-    title: 'Facade Installation',
-  },
+  { image: PROJECT_IMAGE_URLS[0], title: 'High-Rise Window Cleaning' },
+  { image: PROJECT_IMAGE_URLS[1], title: 'Industrial Welding' },
+  { image: PROJECT_IMAGE_URLS[2], title: 'Tank Inspection' },
+  { image: PROJECT_IMAGE_URLS[3], title: 'Bridge Maintenance' },
+  { image: PROJECT_IMAGE_URLS[4], title: 'Wind Turbine Service' },
+  { image: PROJECT_IMAGE_URLS[5], title: 'Facade Installation' },
 ]
 
 export default function Projects() {
@@ -54,6 +37,7 @@ export default function Projects() {
                 alt={project.title}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/80 transition-all duration-300 flex items-center justify-center">
