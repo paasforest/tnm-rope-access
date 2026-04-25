@@ -8,10 +8,12 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import Image from 'next/image'
 import { Check, Shield, Award, Users, Clock } from 'lucide-react'
 import { ABOUT_TEAM_PAGE_URL } from '@/lib/site-images'
+import { SITE_NAME_SHORT } from '@/lib/site-config'
 
 export const metadata: Metadata = {
-  title: 'About Us | TMN Rope Access Projects',
-  description: 'Learn about TMN Rope Access Projects - Professional rope access solutions with years of experience in high-rise and industrial work across South Africa.',
+  title: 'About Us | TMA Projects',
+  description:
+    'Learn about TMA Projects — professional industrial rope access, maintenance, and waterproofing across South Africa.',
 }
 
 const highlights = [
@@ -64,7 +66,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
                   src={ABOUT_TEAM_PAGE_URL}
-                  alt="Diverse team of professionals working together"
+                  alt="Team of professionals at work"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 45vw, 100vw"
@@ -81,8 +83,8 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-6">
-                TMN Rope Access Projects is a leading provider of professional rope access services 
-                in South Africa. With years of experience in the industry, we have built a reputation 
+                {SITE_NAME_SHORT} is a leading provider of industrial rope access, maintenance, and
+                waterproofing in South Africa. With years of experience, we have built a reputation
                 for excellence, safety, and reliability.
               </p>
               <p className="text-white/70 text-lg leading-relaxed mb-8">

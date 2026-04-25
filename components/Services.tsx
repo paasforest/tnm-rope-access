@@ -1,4 +1,4 @@
-import { Anchor, Building2, Sparkles, FileCheck, Wrench, Paintbrush } from 'lucide-react'
+import { Anchor, Building2, Sparkles, FileCheck, Wrench, Paintbrush, Droplets } from 'lucide-react'
 
 const services = [
   {
@@ -15,6 +15,11 @@ const services = [
     icon: Sparkles,
     title: 'High Rise Cleaning',
     description: 'Expert window and facade cleaning services for buildings of any height.',
+  },
+  {
+    icon: Droplets,
+    title: 'Waterproofing',
+    description: 'Waterproofing for facades, roofs, and joints at height with rope access where needed.',
   },
   {
     icon: FileCheck,

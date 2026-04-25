@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { Phone } from 'lucide-react'
+import { Phone, Droplets } from 'lucide-react'
 import { HERO_BG_URL } from '@/lib/site-images'
+import { PHONE_LOCAL, PHONE_TEL_HREF, SITE_NAME_SHORT } from '@/lib/site-config'
 
 export default function Hero() {
   return (
@@ -23,9 +24,12 @@ export default function Hero() {
         <h1 className="font-[family-name:var(--font-bebas-neue)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wider text-white mb-6">
           Professional <span className="text-primary">Rope Access</span> Technicians
         </h1>
-        <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">
-          Specialized rope access solutions for high-rise buildings, industrial structures, 
-          and hard-to-reach areas across South Africa.
+        <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto mb-4 leading-relaxed">
+          {SITE_NAME_SHORT}: industrial rope access, maintenance, and waterproofing for high-rise
+          and hard-to-reach work across South Africa.
+        </p>
+        <p className="text-sm text-white/50 mb-10 max-w-xl mx-auto">
+          Need waterproofing? Jump straight to it — one click below.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
@@ -35,12 +39,21 @@ export default function Hero() {
             Request a Quote
           </Link>
           <a
-            href="tel:+27000000000"
+            href={PHONE_TEL_HREF}
             className="flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-[#0a0a0a] transition-all duration-300 rounded-md w-full sm:w-auto"
           >
             <Phone className="w-5 h-5" />
-            Call Now
+            {PHONE_LOCAL}
           </a>
+        </div>
+        <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Link
+            href="/services#waterproofing"
+            className="inline-flex items-center justify-center gap-2 border-2 border-primary/80 text-primary bg-[#0a0a0a]/50 backdrop-blur-sm px-6 py-3 text-base font-semibold rounded-md w-full sm:w-auto hover:bg-primary/10 transition-all"
+          >
+            <Droplets className="w-5 h-5" />
+            Waterproofing
+          </Link>
         </div>
       </div>
 

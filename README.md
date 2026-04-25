@@ -1,6 +1,6 @@
-# tmn-rope-access
+# tma-rope-access
 
-Next.js site for TMN Rope Access Projects.
+Next.js site for TMA Projects (industrial rope access & waterproofing).
 
 ## Requirements
 
@@ -16,7 +16,7 @@ cp .env.example .env.local   # optional
 If `pnpm` is not installed globally, use **npx** (same commands everywhere):
 
 ```bash
-cd /path/to/tmn
+cd /path/to/tma-rope-access
 npx pnpm@9 install
 npx pnpm@9 dev
 ```

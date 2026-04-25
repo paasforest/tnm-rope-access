@@ -8,8 +8,9 @@ import Image from 'next/image'
 import { PROJECT_IMAGE_URLS } from '@/lib/site-images'
 
 export const metadata: Metadata = {
-  title: 'Projects | TMN Rope Access Projects',
-  description: 'View our portfolio of completed rope access projects including high-rise cleaning, industrial maintenance, inspections, and more across South Africa.',
+  title: 'Projects | TMA Projects',
+  description:
+    'Portfolio of rope access and industrial projects: high-rise work, maintenance, waterproofing, and more across South Africa.',
 }
 
 const projects = [

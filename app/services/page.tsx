@@ -6,15 +6,23 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Anchor, Building2, Sparkles, FileCheck, Wrench, Paintbrush, ArrowRight } from 'lucide-react'
+import { Anchor, Building2, Sparkles, FileCheck, Wrench, Paintbrush, ArrowRight, Droplets } from 'lucide-react'
 import { SERVICES_FEATURE_URL } from '@/lib/site-images'
+import { SITE_NAME_SHORT } from '@/lib/site-config'
 
 export const metadata: Metadata = {
-  title: 'Services | TMN Rope Access Projects',
-  description: 'Explore our professional rope access services including building maintenance, high-rise cleaning, inspections, repairs, painting, and signage installation.',
+  title: 'Services | TMA Projects — Rope Access & Waterproofing',
+  description:
+    'Rope access, building maintenance, high-rise cleaning, waterproofing, signage, inspections, and repairs. TMA Projects across South Africa.',
 }
 
-const services = [
+const services: {
+  id?: string
+  icon: typeof Anchor
+  title: string
+  description: string
+  features: string[]
+}[] = [
   {
     icon: Anchor,
     title: 'Rope Access',
@@ -34,6 +42,14 @@ const services = [
     features: ['Window cleaning', 'Facade washing', 'Pressure washing', 'Stain removal'],
   },
   {
+    id: 'waterproofing',
+    icon: Droplets,
+    title: 'Waterproofing',
+    description:
+      'Protect facades, roofs, joints, and concrete from water ingress. We work at height using rope access to reach details traditional crews cannot, with systems suited to South African weather.',
+    features: ['Facade & wall membranes', 'Roof details & flashings', 'Crack and joint treatment', 'Long-life coatings'],
+  },
+  {
     icon: FileCheck,
     title: 'Signage Installation',
     description: 'Professional installation of signage and banners at elevated positions. We ensure secure mounting and perfect positioning for maximum visibility.',
@@ -49,7 +65,7 @@ const services = [
     icon: Paintbrush,
     title: 'Repairs & Painting',
     description: 'High-quality repairs and painting services for exterior surfaces at any height. We use premium materials for long-lasting results.',
-    features: ['Surface preparation', 'Crack repairs', 'Waterproofing', 'Premium paints'],
+    features: ['Surface preparation', 'Crack repairs', 'Protective coatings', 'Premium paints'],
   },
 ]
 
@@ -69,7 +85,8 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-[#111827] p-8 lg:p-10 rounded-lg border border-transparent hover:border-primary/30 transition-all duration-300"
+                id={service.id}
+                className="group scroll-mt-28 bg-[#111827] p-8 lg:p-10 rounded-lg border border-transparent hover:border-primary/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
@@ -108,7 +125,7 @@ export default function ServicesPage() {
                 Professional Service You Can Trust
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-6">
-                When you choose TMN Rope Access Projects, you&apos;re choosing a team that prioritizes 
+                When you choose {SITE_NAME_SHORT}, you&apos;re choosing a team that prioritizes 
                 safety, quality, and customer satisfaction. Our rope access methods offer significant 
                 advantages over traditional scaffolding and cherry pickers.
               </p>
@@ -154,7 +171,7 @@ export default function ServicesPage() {
               <div className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
                   src={SERVICES_FEATURE_URL}
-                  alt="Industrial technician at work on site"
+                  alt="Technician in safety gear on site"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 40vw, 100vw"

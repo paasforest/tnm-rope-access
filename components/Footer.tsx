@@ -1,15 +1,19 @@
 import Link from 'next/link'
+import BrandLogo from '@/components/BrandLogo'
+import { CONTACT_EMAIL, PHONE_E164, PHONE_TEL_HREF, SITE_NAME_SHORT } from '@/lib/site-config'
 
 const quickLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
+  { href: '/services#waterproofing', label: 'Waterproofing' },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
 ]
 
 const serviceLinks = [
   'Rope Access',
+  'Waterproofing',
   'Building Maintenance',
   'High Rise Cleaning',
   'Signage Installation',
@@ -24,13 +28,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <span className="font-[family-name:var(--font-bebas-neue)] text-xl tracking-wider text-white">
-                TMN <span className="text-primary">ROPE ACCESS</span> PROJECTS
-              </span>
-            </Link>
+            <div className="mb-4">
+              <BrandLogo />
+            </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              Professional rope access solutions for high-rise buildings and industrial structures across South Africa.
+              {SITE_NAME_SHORT}: industrial rope access, maintenance, and waterproofing for high-rise and
+              industrial sites across South Africa.
             </p>
           </div>
 
@@ -74,13 +77,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="tel:+27000000000" className="text-white/60 hover:text-primary transition-colors">
-                  +27 00 000 0000
+                <a href={PHONE_TEL_HREF} className="text-white/60 hover:text-primary transition-colors">
+                  {PHONE_E164}
                 </a>
               </li>
               <li>
-                <a href="mailto:info@tmnropeaccess.co.za" className="text-white/60 hover:text-primary transition-colors">
-                  info@tmnropeaccess.co.za
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-white/60 hover:text-primary transition-colors">
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="text-white/60">
@@ -93,7 +96,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} TMN Rope Access Projects. All rights reserved.
+            &copy; {new Date().getFullYear()} {SITE_NAME_SHORT}. All rights reserved.
           </p>
         </div>
       </div>

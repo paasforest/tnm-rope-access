@@ -6,6 +6,7 @@ import PageHeader from '@/components/PageHeader'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import { Phone, Mail, MapPin, Send, Clock } from 'lucide-react'
+import { CONTACT_EMAIL, PHONE_E164, PHONE_TEL_HREF, WHATSAPP_HREF, SITE_NAME_SHORT } from '@/lib/site-config'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -97,7 +98,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full bg-[#0a0a0a] border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        placeholder="+27 00 000 0000"
+                        placeholder={PHONE_E164}
                       />
                     </div>
                     <div>
@@ -113,6 +114,7 @@ export default function ContactPage() {
                       >
                         <option value="">Select a service</option>
                         <option value="rope-access">Rope Access</option>
+                        <option value="waterproofing">Waterproofing</option>
                         <option value="building-maintenance">Building Maintenance</option>
                         <option value="high-rise-cleaning">High Rise Cleaning</option>
                         <option value="signage-installation">Signage Installation</option>
@@ -163,8 +165,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-white/60 text-sm mb-1">Phone</p>
-                      <a href="tel:+27000000000" className="text-white hover:text-primary transition-colors text-lg">
-                        +27 00 000 0000
+                      <a href={PHONE_TEL_HREF} className="text-white hover:text-primary transition-colors text-lg">
+                        {PHONE_E164}
                       </a>
                     </div>
                   </div>
@@ -174,8 +176,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-white/60 text-sm mb-1">Email</p>
-                      <a href="mailto:info@tmnropeaccess.co.za" className="text-white hover:text-primary transition-colors text-lg">
-                        info@tmnropeaccess.co.za
+                      <a href={`mailto:${CONTACT_EMAIL}`} className="text-white hover:text-primary transition-colors text-lg">
+                        {CONTACT_EMAIL}
                       </a>
                     </div>
                   </div>
@@ -213,10 +215,10 @@ export default function ContactPage() {
                   Need Urgent Help?
                 </h3>
                 <p className="text-primary-foreground/80 mb-6">
-                  For emergency rope access services, call us directly or send us a WhatsApp message.
+                  For urgent work on site, call {SITE_NAME_SHORT} on {PHONE_E164} or message us on WhatsApp.
                 </p>
                 <a
-                  href="https://wa.me/27000000000"
+                  href={WHATSAPP_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#0a0a0a] text-white px-6 py-3 font-semibold hover:bg-[#111827] transition-all duration-300 rounded-md"

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Send } from 'lucide-react'
+import { CONTACT_EMAIL, PHONE_E164, PHONE_TEL_HREF } from '@/lib/site-config'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -82,7 +83,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full bg-[#0a0a0a] border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="+27 00 000 0000"
+                placeholder={PHONE_E164}
               />
             </div>
             <div>
@@ -122,8 +123,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-white/60 text-sm mb-1">Phone</p>
-                    <a href="tel:+27000000000" className="text-white hover:text-primary transition-colors">
-                      +27 00 000 0000
+                    <a href={PHONE_TEL_HREF} className="text-white hover:text-primary transition-colors">
+                      {PHONE_E164}
                     </a>
                   </div>
                 </div>
@@ -133,8 +134,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-white/60 text-sm mb-1">Email</p>
-                    <a href="mailto:info@tmnropeaccess.co.za" className="text-white hover:text-primary transition-colors">
-                      info@tmnropeaccess.co.za
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-white hover:text-primary transition-colors">
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>

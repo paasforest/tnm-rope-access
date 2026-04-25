@@ -14,9 +14,18 @@ const bebasNeue = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
-  title: 'TMN Rope Access Projects | Professional Rope Access Technicians',
-  description: 'Specialized rope access solutions for high-rise buildings, industrial structures, and hard-to-reach areas across South Africa. Professional, safe, and reliable services.',
-  keywords: ['rope access', 'high-rise maintenance', 'building cleaning', 'industrial rope access', 'South Africa'],
+  title: 'TMA Projects | Industrial Rope Access & Waterproofing | South Africa',
+  description:
+    'TMA Projects — industrial rope access, building maintenance, and waterproofing for high-rise and industrial sites across South Africa. Safe, professional crews.',
+  keywords: [
+    'rope access',
+    'waterproofing',
+    'high-rise maintenance',
+    'building cleaning',
+    'industrial rope access',
+    'TMA Projects',
+    'South Africa',
+  ],
 }
 
 export default function RootLayout({

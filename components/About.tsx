@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { ABOUT_TEAM_HOME_URL } from '@/lib/site-images'
+import { SITE_NAME_SHORT } from '@/lib/site-config'
 
 const highlights = [
   'Skilled rope access technicians',
@@ -18,13 +19,12 @@ export default function About() {
           <div>
             <span className="text-primary font-semibold text-sm tracking-wider uppercase">About Us</span>
             <h2 className="font-[family-name:var(--font-bebas-neue)] text-4xl sm:text-5xl lg:text-6xl tracking-wider text-white mt-3 mb-6">
-              Why Choose TMN Rope Access?
+              Why Choose {SITE_NAME_SHORT}?
             </h2>
             <p className="text-white/70 text-lg leading-relaxed mb-8">
-              With years of experience in the rope access industry, TMN Rope Access Projects 
-              delivers exceptional services for high-rise buildings, industrial structures, 
-              and challenging environments. Our team of skilled technicians is committed to 
-              safety, quality, and customer satisfaction.
+              With years of experience in industrial rope access, {SITE_NAME_SHORT} delivers
+              services for high-rise buildings, industrial structures, and challenging environments.
+              Our technicians are committed to safety, quality, and customer satisfaction.
             </p>
             
             {/* Highlights */}
@@ -45,7 +45,7 @@ export default function About() {
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
                 src={ABOUT_TEAM_HOME_URL}
-                alt="Diverse professional team collaborating at work"
+                alt="Professional team collaborating on site"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"

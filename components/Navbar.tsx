@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import BrandLogo from '@/components/BrandLogo'
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
+  { href: '/services#waterproofing', label: 'Waterproofing' },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -32,12 +34,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-[family-name:var(--font-bebas-neue)] text-xl lg:text-2xl tracking-wider text-white">
-              TMN <span className="text-primary">ROPE ACCESS</span> PROJECTS
-            </span>
-          </Link>
+          <BrandLogo priority className="shrink-0" />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">

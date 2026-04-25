@@ -6,24 +6,34 @@ import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Anchor, Building2, Sparkles, ArrowRight, Check } from 'lucide-react'
+import { Anchor, Building2, Sparkles, ArrowRight, Check, Droplets } from 'lucide-react'
 import { ABOUT_TEAM_HOME_URL, PROJECT_IMAGE_URLS } from '@/lib/site-images'
+import { SITE_NAME_SHORT } from '@/lib/site-config'
 
 const featuredServices = [
   {
     icon: Anchor,
     title: 'Rope Access',
     description: 'Professional rope access techniques for safe and efficient work at height.',
+    href: '/services',
   },
   {
     icon: Building2,
     title: 'Building Maintenance',
     description: 'Comprehensive maintenance solutions for high-rise buildings.',
+    href: '/services',
   },
   {
     icon: Sparkles,
     title: 'High Rise Cleaning',
     description: 'Expert window and facade cleaning services for buildings of any height.',
+    href: '/services',
+  },
+  {
+    icon: Droplets,
+    title: 'Waterproofing',
+    description: 'Facade, roof, and joint waterproofing at height—visible here without digging through menus.',
+    href: '/services#waterproofing',
   },
 ]
 
@@ -59,11 +69,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="group bg-[#0a0a0a] p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+                href={service.href}
+                className="group bg-[#0a0a0a] p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 block text-left"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                   <service.icon className="w-7 h-7 text-primary" />
@@ -74,7 +85,7 @@ export default function Home() {
                 <p className="text-white/70 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -97,12 +108,12 @@ export default function Home() {
             <div>
               <span className="text-primary font-semibold text-sm tracking-wider uppercase">About Us</span>
               <h2 className="font-[family-name:var(--font-bebas-neue)] text-4xl sm:text-5xl lg:text-6xl tracking-wider text-white mt-3 mb-6">
-                Why Choose TMN Rope Access?
+                Why Choose {SITE_NAME_SHORT}?
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-8">
-                With years of experience in the rope access industry, TMN Rope Access Projects 
-                delivers exceptional services for high-rise buildings, industrial structures, 
-                and challenging environments.
+                With years of experience in industrial rope access, {SITE_NAME_SHORT} delivers
+                exceptional work for high-rise buildings, industrial structures, and challenging
+                environments.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -129,7 +140,7 @@ export default function Home() {
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
                   src={ABOUT_TEAM_HOME_URL}
-                  alt="Diverse professional team collaborating at work"
+                  alt="Professional team collaborating on site"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"

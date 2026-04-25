@@ -1,7 +1,9 @@
+import { WHATSAPP_HREF } from '@/lib/site-config'
+
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/27000000000"
+      href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 z-50"
