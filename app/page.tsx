@@ -74,7 +74,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={service.href}
-                className="group bg-[#0a0a0a] p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 block text-left"
+                className="group bg-background p-8 rounded-lg border border-transparent hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 block text-left"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                   <service.icon className="w-7 h-7 text-primary" />
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-20 lg:py-28 bg-[#0a0a0a]">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -145,7 +145,7 @@ export default function Home() {
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 border-4 border-primary rounded-lg -z-10" />
             </div>
@@ -156,7 +156,7 @@ export default function Home() {
       <Stats />
 
       {/* Featured Projects Section */}
-      <section className="py-20 lg:py-28 bg-[#0a0a0a]">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-primary font-semibold text-sm tracking-wider uppercase">Portfolio</span>

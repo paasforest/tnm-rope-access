@@ -64,7 +64,7 @@ export default function ProjectsPage() {
       />
       
       {/* Projects Grid */}
-      <section className="py-20 lg:py-28 bg-[#0a0a0a]">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold rounded-full">
                       {project.category}

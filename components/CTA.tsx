@@ -12,7 +12,7 @@ export default function CTA() {
         </p>
         <Link
           href="/contact"
-          className="inline-block bg-[#0a0a0a] text-white px-10 py-4 text-lg font-semibold hover:bg-[#111827] transition-all duration-300 rounded-md"
+          className="inline-block bg-background text-white px-10 py-4 text-lg font-semibold hover:bg-[#111827] transition-all duration-300 rounded-md"
         >
           Request a Quote
         </Link>

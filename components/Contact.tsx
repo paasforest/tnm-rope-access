@@ -52,7 +52,7 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full bg-[#0a0a0a] border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 placeholder="Your name"
               />
             </div>
@@ -67,7 +67,7 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-[#0a0a0a] border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 placeholder="your@email.com"
               />
             </div>
@@ -82,7 +82,7 @@ export default function Contact() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full bg-[#0a0a0a] border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 placeholder={PHONE_E164}
               />
             </div>
@@ -97,7 +97,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full bg-[#0a0a0a] border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                className="w-full bg-background border border-border rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                 placeholder="Tell us about your project..."
               />
             </div>

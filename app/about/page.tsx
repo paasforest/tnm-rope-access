@@ -58,7 +58,7 @@ export default function AboutPage() {
       />
       
       {/* Main About Section */}
-      <section className="py-20 lg:py-28 bg-[#0a0a0a]">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   className="object-cover"
                   sizes="(min-width: 1024px) 45vw, 100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 border-4 border-primary rounded-lg -z-10" />
             </div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-[#0a0a0a] p-8 rounded-lg text-center"
+                className="bg-background p-8 rounded-lg text-center"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-primary" />
@@ -146,7 +146,7 @@ export default function AboutPage() {
       <Stats />
 
       {/* Mission Section */}
-      <section className="py-20 lg:py-28 bg-[#0a0a0a]">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <span className="text-primary font-semibold text-sm tracking-wider uppercase">Our Mission</span>

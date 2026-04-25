@@ -10,9 +10,7 @@ type BrandLogoProps = {
 }
 
 export default function BrandLogo({ className = '', priority = false, variant = 'header' }: BrandLogoProps) {
-  // Logo file is a square with dark edges; a light ring + padding stops it “disappearing” into #0a0a0a
-  const frame =
-    'rounded-lg p-1.5 sm:p-2 ring-1 ring-white/15 bg-white/[0.04] shadow-[0_0_0_1px_rgba(0,0,0,0.2)]'
+  /* Site base is logo-black (#000); no frame so asset blends naturally */
   const size =
     variant === 'footer'
       ? 'relative block h-16 w-full max-w-[min(100%,20rem)] sm:h-[4.5rem] sm:max-w-[22rem] shrink-0'
@@ -21,7 +19,7 @@ export default function BrandLogo({ className = '', priority = false, variant = 
   return (
     <Link
       href="/"
-      className={`${size} ${frame} ${className}`.trim()}
+      className={`${size} ${className}`.trim()}
       aria-label={`${SITE_NAME_SHORT} home`}
     >
       <Image

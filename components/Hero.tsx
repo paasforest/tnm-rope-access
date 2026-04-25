@@ -16,7 +16,7 @@ export default function Hero() {
           backgroundImage: `url(${HERO_BG_URL})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/70 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
       </div>
 
       {/* Content */}
@@ -40,7 +40,7 @@ export default function Hero() {
           </Link>
           <a
             href={PHONE_TEL_HREF}
-            className="flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-[#0a0a0a] transition-all duration-300 rounded-md w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-background transition-all duration-300 rounded-md w-full sm:w-auto"
           >
             <Phone className="w-5 h-5" />
             {PHONE_LOCAL}
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             href="/services#waterproofing"
-            className="inline-flex items-center justify-center gap-2 border-2 border-primary/80 text-primary bg-[#0a0a0a]/50 backdrop-blur-sm px-6 py-3 text-base font-semibold rounded-md w-full sm:w-auto hover:bg-primary/10 transition-all"
+            className="inline-flex items-center justify-center gap-2 border-2 border-primary/80 text-primary bg-background/50 backdrop-blur-sm px-6 py-3 text-base font-semibold rounded-md w-full sm:w-auto hover:bg-primary/10 transition-all"
           >
             <Droplets className="w-5 h-5" />
             Waterproofing

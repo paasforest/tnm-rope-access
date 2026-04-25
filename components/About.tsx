@@ -12,7 +12,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-28 bg-[#0a0a0a]">
+    <section id="about" className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
@@ -50,7 +50,7 @@ export default function About() {
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             {/* Decorative Element */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 border-4 border-primary rounded-lg -z-10" />
