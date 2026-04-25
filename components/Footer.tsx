@@ -28,8 +28,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <BrandLogo />
+            <div className="mb-4 max-w-sm">
+              <BrandLogo variant="footer" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               {SITE_NAME_SHORT}: industrial rope access, maintenance, and waterproofing for high-rise and

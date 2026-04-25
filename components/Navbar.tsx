@@ -33,8 +33,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <BrandLogo priority className="shrink-0" />
+        <div className="flex items-center justify-between min-h-[4.5rem] py-2 lg:min-h-[5.25rem]">
+          <BrandLogo priority variant="header" className="min-w-0" />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
